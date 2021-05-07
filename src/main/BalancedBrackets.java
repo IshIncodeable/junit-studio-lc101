@@ -1,7 +1,7 @@
 package main;
 
-
 public class BalancedBrackets {
+
     /**
      * The function BalancedBrackets should return true if and only if
      * the input string has a set of "balanced" brackets.
@@ -23,9 +23,14 @@ public class BalancedBrackets {
      */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
+
+        if (str.length() == 0) { //empty string
+            brackets++;
+        }
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
+
             } else if (ch == ']') {
                 brackets--;
             }
